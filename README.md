@@ -36,8 +36,6 @@ AI-Powered-Cyber-Threat-Detection-Dashboard/
 ├── README.md # Project overview and documentation
 └── req.txt # Required dependencies
 
-markdown
-Copy code
 
 ---
 
@@ -97,15 +95,7 @@ Copy code
    cd AI-Powered-Cyber-Threat-Detection-Dashboard
 Install dependencies:
 
-bash
-Copy code
 pip install -r req.txt
-Run the dashboard (Streamlit example):
-
-bash
-Copy code
-streamlit run ui/index.py
-✅ Example Use Cases
 Detect brute-force login attempts.
 
 Flag abnormal spikes in network traffic (possible DDoS).
@@ -124,21 +114,6 @@ Commit your changes
 Submit a Pull Request
 
 📜 License
-This project is licensed under the MIT License.
+This project is licensed under the Student of lpu.
 
-markdown
-Copy code
 
----
-
-This is a **single complete README.md**, broken down into:
-- project structure
-- roles
-- tech stack
-- workflow
-- how to run
-- use cases
-- contribution
-- license  
-
-👉 Would you like me to also **add placeholder `.gitkeep` or mini-README files** inside `ml/` and 
