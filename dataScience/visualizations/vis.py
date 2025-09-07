@@ -5,12 +5,12 @@ import seaborn as sns
 import os
 
 # Path to dataset
-DATA_PATH = r"A:\Projects\AI-Powered-Cyber-Threat-Detection-Dashboard\dataScience\dataset\data.csv"
+DATA_PATH = r"A:\Projects\AI-Powered-Cyber-Threat-Detection-Dashboard\dataScience\dataset\processed_data.xlsx"
 
 def load_data():
     """Load the dataset for visualization"""
     print(f"📂 Loading dataset from: {DATA_PATH}")
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_excel(DATA_PATH)
     print("✅ Dataset loaded:", df.shape)
     return df
 

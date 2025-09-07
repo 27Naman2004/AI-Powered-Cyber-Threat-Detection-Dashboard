@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
-DATA_PATH = r"A:\Projects\AI-Powered-Cyber-Threat-Detection-Dashboard\dataScience\dataset\data.csv"
+DATA_PATH = r"A:\Projects\AI-Powered-Cyber-Threat-Detection-Dashboard\dataScience\dataset\data.xlsx"
 
 def load_data():
     print(f"📂 Loading dataset from: {DATA_PATH}")
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_excel(DATA_PATH)
     print("✅ Dataset loaded:", df.shape)
     return df
 
@@ -29,10 +29,11 @@ def encode_labels(df):
     if "Label" in df.columns:
         df["Label"] = le.fit_transform(df["Label"])
     return df
-
 def save_data(df):
-    df.to_csv(DATA_PATH, index=False)
-    print(f"💾 Saved processed dataset at: {DATA_PATH} ({df.shape})")
+    PROCESSED_DATA_PATH = r"A:\Projects\AI-Powered-Cyber-Threat-Detection-Dashboard\dataScience\dataset\processed_data.xlsx"
+    df.to_excel(PROCESSED_DATA_PATH, index=False)
+    print(f"💾 Saved processed dataset at: {PROCESSED_DATA_PATH} ({df.shape})")
+
 
 if __name__ == "__main__":
     df = load_data()

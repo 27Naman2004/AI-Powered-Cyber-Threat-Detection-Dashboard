@@ -1,15 +1,14 @@
-# dataScience/future/feature.py
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 # Path to dataset
-DATA_PATH = r"A:\Projects\AI-Powered-Cyber-Threat-Detection-Dashboard\dataScience\dataset\data.csv"
+DATA_PATH = r"A:\Projects\AI-Powered-Cyber-Threat-Detection-Dashboard\dataScience\dataset\processed_data.xlsx"
 
 def load_data():
     """Load the preprocessed dataset from dataset folder"""
     print(f"📂 Loading dataset from: {DATA_PATH}")
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_excel(DATA_PATH)
     print("✅ Dataset loaded:", df.shape)
     return df
 
@@ -50,12 +49,12 @@ def scale_features(X, method="standard"):
     return X_scaled
 
 def save_features(X, y=None):
-    """Save processed features (and target if available) back to CSV"""
+    """Save processed features (and target if available) back to XLSX"""
     df_out = X.copy()
     if y is not None:
         df_out["Label"] = y  # add back target column
 
-    df_out.to_csv(DATA_PATH, index=False)
+    df_out.to_excel(DATA_PATH, index=False)
     print(f"💾 Saved feature dataset at: {DATA_PATH} ({df_out.shape})")
 
 if __name__ == "__main__":
